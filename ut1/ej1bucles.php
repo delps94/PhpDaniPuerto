@@ -2,7 +2,7 @@
 <HEAD><TITLE> EJ1B – Conversor decimal a binario</TITLE></HEAD>
 <BODY>
 <?php
-$num="18";
+$num="192";
 $n="0";
 while ($n<$num) {
 $n=decbin($n); 
@@ -13,7 +13,7 @@ $n++;
 }
 $numbinario=decbin($n);
 $numbinariocompleto=str_pad($numbinario,8,"0",STR_PAD_LEFT);
-echo "$numbinariocompleto";
+echo "$num en binario es $numbinariocompleto";
 ; 	 
 ?>
 </BODY>
