@@ -39,3 +39,18 @@ $aciertoCarton2++;
 array_shift($bombo);
 
 }
+
+if($aciertoCarton2==15) {
+	echo "has ganado J2";
+}
+
+else if ($aciertoCarton1==15) echo "has ganado J1";
+
+// if (in_array($bola, $carton)) { //si la bola que sale esta en el carton
+// 	echo "la bola ".$bola. " esta en el carton"; //imprimo que la bola esta en el carton 
+// 		//muestro array de aciertos.
+
+
+?>
+</body>
+</html>
