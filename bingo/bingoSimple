@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BingoCompleto</title>
+</head>
+<body>
+	<?php
+	$carton=array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
+	$carton2=array(20,21,22,23,24,25,26,27,28,29,30,31,32,33,34);
+	 
+	$aciertoCarton1=0;
+	$aciertoCarton2=0;
+$bombo=array(); //creamos bombo
+for($i=0;$i<60;$i++){
+
+
+   	$bombo[$i]=$i+1;	//bombo tiene numeros sin repetir del 1 al 60
+   }
+   shuffle($bombo); // movemos bombo para descolocar los numeros 
+
+$contadorbolas=0;
+while ($aciertoCarton1<15||$aciertoCarton2<15) {   //mientras que haya menos de 15 aciertos 
+$bombo[0]; 						//sacamos la primera bola 
+$contadorbolas++;
+echo "la posicion de  bola ".$contadorbolas." es el numero ". $bombo[0]."<br>";
+if (in_array($bombo[0], $carton)) { //si la bola esta en el carton 1
+	echo "acierto en carton 1 <br>.";
+	echo " el numero de aciertos del carton 1 es ".$aciertoCarton1."<br>";
+	//$bombo=array_shift($bombo);
+	$aciertoCarton1++; }
+if (in_array($bombo[0], $carton2)) { 
+echo "acierto en carton 2 <br>";
+echo " el numero de aciertos del carton 2 es ".$aciertoCarton2."<br>";
+$aciertoCarton2++;
+
+}
+array_shift($bombo);
+
+}
